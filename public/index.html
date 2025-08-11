@@ -410,6 +410,72 @@
     </section>
     <!-- End Diet Plan Section -->
 
+    <!-- Workout Generator Section -->
+    <section id="workout-generator" class="section__container">
+      <h2 class="section__header">Workout Generator</h2>
+      <p class="section__subheader">Get a personalized workout routine based on your goals and fitness level.</p>
+      <form id="workoutForm" class="workout__form" style="background:#23272a; border-radius:16px; padding:2rem; max-width:500px; margin:2rem auto 0 auto; box-shadow:0 2px 10px rgba(0,0,0,0.08);">
+        <div class="workout__form__row" style="margin-bottom:1.5rem;">
+          <label for="workoutAge" style="color:#fff; font-size:1.1rem;">Age:</label>
+          <input type="number" id="workoutAge" name="age" min="10" max="100" required style="width:100%; margin-top:0.5rem; background:#18191a; color:#fff; border:2px solid #47d75f; border-radius:6px; padding:0.75rem; font-size:1rem;" />
+        </div>
+        <div class="workout__form__row" style="margin-bottom:1.5rem;">
+          <label for="workoutWeight" style="color:#fff; font-size:1.1rem;">Weight (kg):</label>
+          <input type="number" id="workoutWeight" name="weight" min="20" max="200" required style="width:100%; margin-top:0.5rem; background:#18191a; color:#fff; border:2px solid #47d75f; border-radius:6px; padding:0.75rem; font-size:1rem;" />
+        </div>
+        <div class="workout__form__row" style="margin-bottom:1.5rem;">
+          <label for="workoutGoal" style="color:#fff; font-size:1.1rem;">Workout Goal:</label>
+          <select id="workoutGoal" name="workoutGoal" required style="width:100%; margin-top:0.5rem; background:#18191a; color:#fff; border:2px solid #47d75f; border-radius:6px; padding:0.75rem; font-size:1rem;">
+            <option value="strength">Strength</option>
+            <option value="endurance">Endurance</option>
+            <option value="fat-loss">Fat Loss</option>
+            <option value="muscle-gain">Muscle Gain</option>
+            <option value="flexibility">Flexibility</option>
+          </select>
+        </div>
+        <div class="workout__form__row" style="margin-bottom:1.5rem;">
+          <label for="fitnessLevel" style="color:#fff; font-size:1.1rem;">Fitness Level:</label>
+          <select id="fitnessLevel" name="fitnessLevel" required style="width:100%; margin-top:0.5rem; background:#18191a; color:#fff; border:2px solid #47d75f; border-radius:6px; padding:0.75rem; font-size:1rem;">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+        <button class="btn" type="submit" style="width:100%; background:#47d75f; color:#fff; font-size:1.15rem; border-radius:6px; margin-top:1rem;">Generate Workout Plan</button>
+      </form>
+      <div id="workoutResult" class="workout__result"></div>
+      <button class="btn" id="saveWorkoutBtn" style="display:none; margin-top:1rem;">Save Workout</button>
+    </section>
+
+    <!-- Workout Generator Section -->
+    <section id="workout-generator" class="section__container workout__container">
+      <h2 class="section__header">Workout Generator</h2>
+      <p class="section__subheader">Get a custom workout routine based on your goals and fitness level.</p>
+      <form id="workoutForm" class="workout__for      git add public/index.htmlm">
+        <div class="workout__form__row">
+          <label for="workoutGoal">Workout Goal:</label>
+          <select id="workoutGoal" name="workoutGoal" required>
+            <option value="strength">Strength</option>
+            <option value="endurance">Endurance</option>
+            <option value="fat-loss">Fat Loss</option>
+            <option value="muscle-gain">Muscle Gain</option>
+            <option value="flexibility">Flexibility</option>
+          </select>
+        </div>
+        <div class="workout__form__row">
+          <label for="fitnessLevel">Fitness Level:</label>
+          <select id="fitnessLevel" name="fitnessLevel" required>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Generate Workout Plan</button>
+      </form>
+      <div id="workoutResult" class="workout__result"></div>
+      <button class="btn" id="saveWorkoutBtn" style="display:none; margin-top:1rem;">Save Workout</button>
+    </section>
+
     <footer class="section__container footer__container">
       <span class="bg__blur"></span>
       <span class="bg__blur footer__blur"></span>
