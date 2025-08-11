@@ -20,6 +20,41 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeAnimations();
   initializeTouchSupport();
   initializePerformanceOptimizations();
+  initializeSocialSharing();
+// Social Sharing Functionality
+function initializeSocialSharing() {
+  const facebookBtn = document.getElementById("share-facebook");
+  const twitterBtn = document.getElementById("share-twitter");
+  const whatsappBtn = document.getElementById("share-whatsapp");
+  const resultDiv = document.getElementById("dietResult");
+
+  function getShareText() {
+    // Get plain text from the diet result
+    let text = resultDiv.innerText || "Check out my achievement and diet plan at BodyCraft Gym!";
+    return text.length > 280 ? text.substring(0, 277) + "..." : text;
+  }
+
+  if (facebookBtn) {
+    facebookBtn.addEventListener("click", function () {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(getShareText());
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, "_blank");
+    });
+  }
+  if (twitterBtn) {
+    twitterBtn.addEventListener("click", function () {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(getShareText());
+      window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank");
+    });
+  }
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener("click", function () {
+      const text = encodeURIComponent(getShareText() + " " + window.location.href);
+      window.open(`https://wa.me/?text=${text}`, "_blank");
+    });
+  }
+}
 });
 
 // Back to Top functionality
